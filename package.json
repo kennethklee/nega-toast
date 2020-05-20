@@ -1,6 +1,6 @@
 {
   "name": "nega-toast",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Simple toast web component",
   "main": "nega-toast.js",
   "scripts": {
