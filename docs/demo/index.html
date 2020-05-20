@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>nega-toast demo</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module">import "../node_modules/@polymer/iron-demo-helpers/demo-pages-shared-styles.js";
+import "../node_modules/@polymer/iron-demo-helpers/demo-snippet.js";
+import '../nega-toast.js';</script>
+
+    </head><custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+        nega-toast {
+          bottom: 40px;
+          left: 40px;
+        }
+
+        nega-toast.green {
+          color: lightgreen;
+          background-color: darkgreen;
+        }
+        nega-toast.yellow {
+          color: yellow;
+          background-color: darkgoldenrod;
+        }
+        nega-toast.compact {
+          padding: 8px;
+          font: bold 8px Arial, san-serif;
+        }
+        nega-toast.pill {
+          border-radius: 50%;
+        }
+      </style>
+    </custom-style>
+  
+  
+    <a href="https://kennethklee.github.io/nega-toast/demo/">
+      <code>If you are viewing from webcomponents.org, the demo may not work due to incompatibilities with lit-html and the site. Click here to visit the working demo.</code>
+    </a>
+
+    <section class="vertical-section-container centered">
+      <h3>Basic demo</h3>
+      <demo-snippet>
+        <template>
+          <button onclick="this.nextElementSibling.toggle()">Toggle Toast</button>
+          <nega-toast>Hi</nega-toast>
+        </template>
+      </demo-snippet>
+    </section>
+
+    <section class="vertical-section-container centered">
+      <h3>Closable nega-toast demo</h3>
+      <demo-snippet>
+        <template>
+          <button onclick="this.nextElementSibling.open()">Open</button>
+          <nega-toast><button onclick="this.parentElement.close()">Close</button></nega-toast>
+        </template>
+      </demo-snippet>
+    </section>
+
+    <section class="vertical-section-container centered">
+      <h3>Auto close nega-toast demo</h3>
+      <demo-snippet>
+        <template>
+          <button onclick="this.nextElementSibling.open()">Open</button>
+          <nega-toast duration="1000">Closing in 1 second...</nega-toast>
+        </template>
+      </demo-snippet>
+    </section>
+
+    <section class="vertical-section-container centered">
+      <h3>Styled demo</h3>
+      <demo-snippet>
+        <template>
+          <button onclick="this.nextElementSibling.open()">Green</button>
+          <nega-toast class="green" duration="1000">Green</nega-toast>
+          <button onclick="this.nextElementSibling.open()">Yellow</button>
+          <nega-toast class="yellow" duration="1000">Yellow</nega-toast>
+          <button onclick="this.nextElementSibling.open()">Compact</button>
+          <nega-toast class="compact" duration="1000">Compact</nega-toast>
+          <button onclick="this.nextElementSibling.open()">Pill</button>
+          <nega-toast class="pill" duration="1000">Pill</nega-toast>
+        </template>
+      </demo-snippet>
+    </section>
+  
+
+</html>

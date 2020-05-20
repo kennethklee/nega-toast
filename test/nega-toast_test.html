@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>nega-toast test</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
+
+    <script type="module" src="../nega-toast.js"></script>
+  </head>
+  <body>
+    <test-fixture id="BasicTestFixture">
+      <template>
+        <nega-toast></nega-toast>
+      </template>
+    </test-fixture>
+
+    <script type="module">
+      describe('nega-toast', () => {
+        it('instantiates the element with default properties', async () => {
+          const element = fixture('BasicTestFixture')
+
+          expect(element).property('opened').to.equal(false)
+          expect(element).property('duration').to.equal(null)
+        })
+      })
+    </script>
+
+  </body>
+</html>
