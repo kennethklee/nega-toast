@@ -1,8 +1,8 @@
 {
-  "name": "nega-donut",
+  "name": "nega-toast",
   "version": "0.0.0",
-  "description": "SVG Donut as a WebComponent",
-  "main": "nega-donut.js",
+  "description": "Simple toast web component",
+  "main": "nega-toast.js",
   "scripts": {
     "start": "polymer serve --npm -H 0",
     "test": "polymer test --npm",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kennethklee/nega-donut.git"
+    "url": "git+https://github.com/kennethklee/nega-toast.git"
   },
   "keywords": [
     "webcomponent"
@@ -18,9 +18,9 @@
   "author": "Kenneth Lee <kennethkl@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kennethklee/nega-donut/issues"
+    "url": "https://github.com/kennethklee/nega-toast/issues"
   },
-  "homepage": "https://github.com/kennethklee/nega-donut#readme",
+  "homepage": "https://github.com/kennethklee/nega-toast#readme",
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "lit-element": "^2.1.0"
