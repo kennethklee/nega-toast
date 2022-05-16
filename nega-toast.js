@@ -10,7 +10,7 @@ Basic: <nega-toast>Hi</nega-toast>
 @element nega-toast
 @demo demo/index.html
 */
-class NegaDonut extends HTMLElement {
+class NegaToast extends HTMLElement {
   constructor() {
     super()
 
@@ -74,4 +74,4 @@ class NegaDonut extends HTMLElement {
     this.opened = !this.opened
   }
 }
-window.customElements.define('nega-toast', NegaDonut);
+window.customElements.define('nega-toast', NegaToast)
