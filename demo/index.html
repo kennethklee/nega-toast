@@ -9,6 +9,11 @@
     <script type="module" src="../nega-toast.js"></script>
 
     <style>
+      main {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
       .snippet {
         box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px;
         font-size: 14px;
@@ -32,7 +37,6 @@
       nega-toast {
         bottom: 40px;
         left: 40px;
-        z-index: 100;
       }
       nega-toast.green {
         color: lightgreen;
@@ -53,69 +57,60 @@
 
   </head>
   <body>
-    <section class="vertical-section-container centered">
-      <h3>Basic demo</h3>
-      <article class="snippet">
-        <section class="demo">
-          <button onclick="this.nextElementSibling.toggle()">Toggle Toast</button>
-          <nega-toast>Hi</nega-toast>
-        </section>
-        <section class="code-container">
-          <xmp>
+    <main>
+      <h2>nega-toast</h2>
+      <section>
+        <h3>Basic demo</h3>
+        <article class="snippet">
+          <section class="demo">
             <button onclick="this.nextElementSibling.toggle()">Toggle Toast</button>
             <nega-toast>Hi</nega-toast>
-          </xmp>
-        </section>
-      </article>
-    </section>
-
-    <section class="vertical-section-container centered">
-      <h3>Closable nega-toast demo</h3>
-      <article class="snippet">
-        <section class="demo">
-          <button onclick="this.nextElementSibling.open()">Open</button>
-          <nega-toast><button onclick="this.parentElement.close()">Close</button></nega-toast>
-        </section>
-        <section class="code-container">
-          <xmp>
+          </section>
+          <section class="code-container">
+            <xmp>
+<button onclick="this.nextElementSibling.toggle()">Toggle Toast</button>
+<nega-toast>Hi</nega-toast>
+            </xmp>
+          </section>
+        </article>
+      </section>
+  
+      <section>
+        <h3>Closable nega-toast demo</h3>
+        <article class="snippet">
+          <section class="demo">
             <button onclick="this.nextElementSibling.open()">Open</button>
             <nega-toast><button onclick="this.parentElement.close()">Close</button></nega-toast>
-          </xmp>
-        </section>
-      </article>
-    </section>
-
-    <section class="vertical-section-container centered">
-      <h3>Auto close nega-toast demo</h3>
-      <article class="snippet">
-        <section class="demo">
-          <button onclick="this.nextElementSibling.open()">Open</button>
-          <nega-toast duration="1000">Closing in 1 second...</nega-toast>
-        </section>
-        <section class="code-container">
-          <xmp>
+          </section>
+          <section class="code-container">
+            <xmp>
+<button onclick="this.nextElementSibling.open()">Open</button>
+<nega-toast><button onclick="this.parentElement.close()">Close</button></nega-toast>
+            </xmp>
+          </section>
+        </article>
+      </section>
+  
+      <section>
+        <h3>Auto close nega-toast demo</h3>
+        <article class="snippet">
+          <section class="demo">
             <button onclick="this.nextElementSibling.open()">Open</button>
             <nega-toast duration="1000">Closing in 1 second...</nega-toast>
-          </xmp>
-        </section>
-      </article>
-    </section>
-
-    <section class="vertical-section-container centered">
-      <h3>Styled demo</h3>
-      <article class="snippet">
-        <section class="demo">
-          <button onclick="this.nextElementSibling.open()">Green</button>
-          <nega-toast class="green" duration="1000">Green</nega-toast>
-          <button onclick="this.nextElementSibling.open()">Yellow</button>
-          <nega-toast class="yellow" duration="1000">Yellow</nega-toast>
-          <button onclick="this.nextElementSibling.open()">Compact</button>
-          <nega-toast class="compact" duration="1000">Compact</nega-toast>
-          <button onclick="this.nextElementSibling.open()">Pill</button>
-          <nega-toast class="pill" duration="1000">Pill</nega-toast>
-        </section>
-        <section class="code-container">
-          <xmp>
+          </section>
+          <section class="code-container">
+            <xmp>
+<button onclick="this.nextElementSibling.open()">Open</button>
+<nega-toast duration="1000">Closing in 1 second...</nega-toast>
+            </xmp>
+          </section>
+        </article>
+      </section>
+  
+      <section>
+        <h3>Styled demo</h3>
+        <article class="snippet">
+          <section class="demo">
             <button onclick="this.nextElementSibling.open()">Green</button>
             <nega-toast class="green" duration="1000">Green</nega-toast>
             <button onclick="this.nextElementSibling.open()">Yellow</button>
@@ -124,9 +119,21 @@
             <nega-toast class="compact" duration="1000">Compact</nega-toast>
             <button onclick="this.nextElementSibling.open()">Pill</button>
             <nega-toast class="pill" duration="1000">Pill</nega-toast>
-          </xmp>
-        </section>
-      </article>
-    </section>
+          </section>
+          <section class="code-container">
+            <xmp>
+<button onclick="this.nextElementSibling.open()">Green</button>
+<nega-toast class="green" duration="1000">Green</nega-toast>
+<button onclick="this.nextElementSibling.open()">Yellow</button>
+<nega-toast class="yellow" duration="1000">Yellow</nega-toast>
+<button onclick="this.nextElementSibling.open()">Compact</button>
+<nega-toast class="compact" duration="1000">Compact</nega-toast>
+<button onclick="this.nextElementSibling.open()">Pill</button>
+<nega-toast class="pill" duration="1000">Pill</nega-toast>
+            </xmp>
+          </section>
+        </article>
+      </section>
+    </main>
   </body>
 </html>

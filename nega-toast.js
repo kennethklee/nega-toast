@@ -17,7 +17,6 @@ class NegaToast extends HTMLElement {
     const template = Object.assign(document.createElement('template'), {innerHTML: `
       <style>
         :host {
-          display: block;
           position: fixed;
 
           box-sizing: border-box;
@@ -27,23 +26,26 @@ class NegaToast extends HTMLElement {
           color: #dddddd;
           border-radius: 2px;
           background-color: #292929;
+          opacity: 0;
 
           transition: transform 0.3s, opacity 0.3s;
           transform: translateY(60px);
-          opacity: 0;
         }
 
         :host([opened]) {
           transform: translateY(0);
           opacity: 1;
+          z-index: 9999;
         }
       </style>
 
       <slot></slot>
     `})
 
+    this.style.display = 'none'
     this.attachShadow({mode: 'open'})
     this.shadowRoot.appendChild(document.importNode(template.content, true))
+    setTimeout(() => this.style.display = '', 0)  // hack to fix initial flash until after the element is created
   }
 
   static get observedAttributes() { return ['opened', 'duration'] }
@@ -59,7 +61,7 @@ class NegaToast extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    name === 'opened' && this.opened && this.duration && setTimeout(() => this.close(), this.duration)
+    if (name === 'opened' && this.opened && this.duration) setTimeout(() => this.close(), this.duration);
   }
 
   open() {
