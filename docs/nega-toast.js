@@ -10,7 +10,7 @@ Basic: <nega-toast>Hi</nega-toast>
 @element nega-toast
 @demo demo/index.html
 */
-class NegaDonut extends HTMLElement {
+class NegaToast extends HTMLElement {
   constructor() {
     super();
     const template = Object.assign(document.createElement('template'), {
@@ -23,7 +23,7 @@ class NegaDonut extends HTMLElement {
           box-sizing: border-box;
           min-width: 100px;
           padding: 16px 24px;
-          
+
           color: #dddddd;
           border-radius: 2px;
           background-color: #292929;
@@ -61,7 +61,7 @@ class NegaDonut extends HTMLElement {
   }
 
   get duration() {
-    return parseInt(this.getAttribute('duration'), 10);
+    return this.hasAttribute('duration') ? parseInt(this.getAttribute('duration'), 10) : null;
   }
 
   set duration(value) {
@@ -88,4 +88,4 @@ class NegaDonut extends HTMLElement {
 
 }
 
-window.customElements.define('nega-toast', NegaDonut);
+window.customElements.define('nega-toast', NegaToast);
