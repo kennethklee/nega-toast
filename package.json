@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/kennethklee/nega-toast#readme",
   "devDependencies": {
-    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
     "@polymer/test-fixture": "^4.0.2",
     "chai": "^4.2.0",
     "mocha": "^7.1.2",
